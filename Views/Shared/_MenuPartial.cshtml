@@ -1,0 +1,64 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@if (SignInManager.IsSignedIn(User))
+{
+
+    @if(UserManager.GetUserName(User).Equals("admin@gmail.com"  )){ // Password:Admin123.
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Productos" asp-action="Index">(+)Producto</a>
+        </li> 
+
+       <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Prod" asp-action="Index">(+)Accesorios</a>
+        </li> 
+
+
+        <li class="nav-item">
+                          <a class="nav-link text-dark" asp-area="" asp-controller="Contactanos" asp-action="Index">Contacto</a>
+                        </li> 
+    }else{
+      
+          <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index">Catalogo</a>
+        </li> 
+
+        <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Accesorios" asp-action="Index">Accesorios</a>
+        </li>
+
+
+        <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Nosotros" asp-action="Index">Nosotros</a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Contactanos" asp-action="Create">Contacto</a>
+        </li> 
+        
+        <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Proforma" asp-action="Index">Carrito</a>
+        </li> 
+    }
+}
+else
+{
+   
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index">Catalogo</a>
+        </li> 
+
+    <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Accesorios" asp-action="Index">Accesorios</a>
+    </li>
+
+        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Nosotros" asp-action="Index">Nosotros</a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" asp-area="" asp-controller="Contactanos" asp-action="Create">Contacto</a>
+                        </li> 
+}

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<AppDilleto.Models.Productos>
+
+
+<div class="card text-center" >
+  <div class="card-header" >
+  </div>
+  <div class="card-body" style="background: #FADBD8 ;">
+    <h5 class="card-title"><h2 style="-webkit-text-stroke: 2px  black;color: #FDFEFE; text-align: center;  font-size: 50px;"> Catálogo </h2></h5>
+    <p class="card-text">
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+  </div>
+</div>
+<div>
+<nav style="margin-top: 5%;">
+  <div class="container-fluid">
+    <form class="d-flex" style="margin-left: 20%;">
+      <input class="form-control me-2" style="width: 500px;" type="search" placeholder="Buscar" aria-label="Search" value=" @ViewData["Getemployeedetails"]" name="Empsearch">
+      <button class="btn btn-outline-danger" type="submit">Buscar</button>
+      <a style="margin-left: 1%; color: #F44336 " asp-action="Index"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+  <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+</svg></a>
+    </form>
+  </div>
+</nav> 
+</div>
+
+
+  <div class="container" >
+    <h1>@ViewData["Message"]</h1>
+    <div class="row" style="margin-top:5%;">
+      <div class="col">
+        <div id="products" class="mb-3">
+          <div class="row">
+            @foreach (var item in Model) {
+            <div class="col-sm-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="96" height="150"
+                       src="/img/@item.ImagenName" alt="@item.ImagenName"  />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                  <p class="card-text">S/. @Html.DisplayFor(modelItem => item.Price)</p>
+                  <a class="btn btn-danger" asp-action="Add" asp-route-id="@item.ID">Agregar a carrito</a>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

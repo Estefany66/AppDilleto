@@ -1,0 +1,143 @@
+﻿@model IEnumerable<AppDilleto.Models.Proforma>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="card text-center" >
+  <div class="card-header" >
+  </div>
+  <div class="card-body" style="background: #FADBD8 ;">
+    <h5 class="card-title"><h2 style="-webkit-text-stroke: 2px  black;color: #FDFEFE; text-align: center;  font-size: 50px;"> Realizar Compra </h2></h5>
+    <p class="card-text">
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+  </div>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto.ImagenName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                <img class="img-responsive" width="96" height="150"
+                       src="~/img/@item.Producto.ImagenName" alt="@item.ImagenName"  />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+               
+                <a asp-action="Edit" class="btn btn-danger"  style="background: #F7819F"  asp-route-id="@item.ID">Editar</a>
+                <a asp-action="Delete" class="btn btn-danger"   style="background: #F7819F" asp-route-id="@item.ID">Borrar</a>
+
+            </td>
+        </tr>
+}
+
+
+<main>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <form id="procesar-pago" action="#">
+                        <div class="form-group row">
+                            <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :
+                            </label>
+                            <div class="col-12 col-md-10">
+                                <input type="text" class="form-control" id="cliente"
+                                    placeholder="Ingresa nombre cliente" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo" required>
+                            </div>
+                        </div>
+
+                        <div id="carrito" class="table-responsive">
+                            <table class="table" id="lista-compra">
+                                <thead>
+                                    
+                                </thead>
+
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-center">SUB TOTAL : S/. 81.90</th>
+                                    <th scope="col">
+                                        <p id="subtotal"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-center">IGV : S/. 17.98</th>
+                                    <th scope="col">
+                                        <p id="igv"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-center">TOTAL : S/. 99.90</th>
+                                    <th scope="col">
+                                        <p id="total"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-center" id="loaders">
+
+                            <img id="cargando" src="~/img/cargando2.gif" width="220">
+
+                        </div>
+
+
+                        <div class="row justify-content-around" style=" margin-left:-5%;" >
+                            <div class="col-xs-12 col-md-4" >
+                                <a href="~/Catalogo" class="btn btn-outline-danger" style="width:300px;">Seguir comprando</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="" class="btn btn-outline-danger" style="width:300px;" id="procesar-compra">Realizar compra</a>
+                            </div>
+                        </div>
+                        
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+        </tbody>
+</table>

@@ -1,0 +1,54 @@
+﻿@model AppDilleto.Models.Proforma
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="card text-center" >
+  <div class="card-header" >
+  </div>
+  <div class="card-body" style="background: #FADBD8 ;">
+    <h5 class="card-title"><h2 style="-webkit-text-stroke: 2px  black;color: #FDFEFE; text-align: center;  font-size: 50px;"> Editar Carrito</h2></h5>
+    <p class="card-text">
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+  </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4" style="margin-top: 5%;">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="UserID" class="control-label" ></label>
+                <input asp-for="UserID" class="form-control"disabled />
+                <span asp-validation-for="UserID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" disabled />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-danger" style="width: 40%;" />
+                <a asp-action="Index"  class="btn btn-danger" >Regresar a Lista</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6" style="width: 100%;">
+       <img src="~/img/edit1.jpg" class="rounded mx-auto d-block" alt="...">
+</div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
