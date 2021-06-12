@@ -9264,11 +9264,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO 15.0\\Proyecto-Pasteleria\\AppDilleto\\AppDilleto.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 4.0\\AppDilleto\\AppDilleto.csproj",
       "projectName": "AppDilleto",
-      "projectPath": "c:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO 15.0\\Proyecto-Pasteleria\\AppDilleto\\AppDilleto.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 4.0\\AppDilleto\\AppDilleto.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO 15.0\\Proyecto-Pasteleria\\AppDilleto\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 4.0\\AppDilleto\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"

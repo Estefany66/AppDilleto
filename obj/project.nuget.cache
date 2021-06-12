@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XhVmGKTJn+x+QQrQvjnm+PooavQaTNExYnCUeM0CMR3UZmlrV7m9abkyo/m7TYeQQqj4y7AYIBCVuAfkcHvBHg==",
+  "dgSpecHash": "9WhL+AHIGMhSRyEPLtrP8r8YWY+4IzvNOyAkw7S9uw8QVRXUaSyjDPY7nqrkmwWpGtSoEeUawmOFmnIaXyA2+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO 15.0\\Proyecto-Pasteleria\\AppDilleto\\AppDilleto.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 4.0\\AppDilleto\\AppDilleto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\epplus\\4.5.3.3\\epplus.4.5.3.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
