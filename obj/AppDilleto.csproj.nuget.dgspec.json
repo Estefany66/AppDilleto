@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 4.0\\AppDilleto\\AppDilleto.csproj": {}
+    "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 5.0\\AppDilleto\\AppDilleto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 4.0\\AppDilleto\\AppDilleto.csproj": {
+    "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 5.0\\AppDilleto\\AppDilleto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 4.0\\AppDilleto\\AppDilleto.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 5.0\\AppDilleto\\AppDilleto.csproj",
         "projectName": "AppDilleto",
-        "projectPath": "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 4.0\\AppDilleto\\AppDilleto.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 5.0\\AppDilleto\\AppDilleto.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 4.0\\AppDilleto\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\programacion 1\\APP DILLETO VOL 5.0\\AppDilleto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
