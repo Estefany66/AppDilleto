@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <div class="card text-center" >
   <div class="card-header" >
   </div>
@@ -142,3 +142,41 @@
     </main>
         </tbody>
 </table>
+
+@if ((String)TempData["prueba02"] == "prueba02") 
+{
+    <input value="hola" id="prueba02" type="hidden">
+}
+@if ((String)TempData["prueba03"] == "prueba03") 
+{
+    <input value="hola" id="prueba03" type="hidden">
+}
+
+   
+
+   <script>
+        
+        var y = document.getElementById('prueba02').value;
+
+        if(y == "hola") {
+
+            Swal.fire(
+                'Editado correctamente',
+                'El Producto se ha editado correctamente',
+                'success'
+            )
+        }
+   </script> 
+    <script>
+        
+        var y = document.getElementById('prueba03').value;
+
+        if(y == "hola") {
+
+            Swal.fire(
+                'Eliminacion  correcta',
+                'El Producto se ha Eliminado correctamente',
+                'success'
+            )
+        }
+   </script> 

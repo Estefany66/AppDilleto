@@ -121,6 +121,7 @@ namespace plantitas.Controllers
                         throw;
                     }
                 }
+                TempData["prueba02"] = "prueba02";
                 return RedirectToAction(nameof(Index));
             }
             return View(proforma);
@@ -140,7 +141,7 @@ namespace plantitas.Controllers
             {
                 return NotFound();
             }
-
+TempData["prueba03"] = "prueba03";
             return View(proforma);
         }
 
