@@ -61,6 +61,8 @@ namespace AppDilleto.Controllers
             {
                 _context.Add(producto);
                 await _context.SaveChangesAsync();
+                TempData["prueba"] = "prueba01";
+               
                 return RedirectToAction(nameof(Index));
             }
             return View(producto);
@@ -112,6 +114,7 @@ namespace AppDilleto.Controllers
                         throw;
                     }
                 }
+                 TempData["prueba02"] = "prueba02";
                 return RedirectToAction(nameof(Index));
             }
             return View(producto);
@@ -131,7 +134,7 @@ namespace AppDilleto.Controllers
             {
                 return NotFound();
             }
-
+TempData["prueba03"] = "prueba03";
             return View(producto);
         }
 
