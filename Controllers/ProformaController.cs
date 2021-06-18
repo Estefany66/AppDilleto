@@ -121,7 +121,6 @@ namespace AppDilleto.Controllers
                         throw;
                     }
                 }
-                
                 return RedirectToAction(nameof(Index));
             }
             return View(proforma);
@@ -141,7 +140,7 @@ namespace AppDilleto.Controllers
             {
                 return NotFound();
             }
-TempData["prueba03"] = "prueba03";
+
             return View(proforma);
         }
 
