@@ -9,7 +9,7 @@ using AppDilleto.Data;
 using AppDilleto.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace plantitas.Controllers
+namespace AppDilleto.Controllers
 {
     public class ProformaController : Controller
     {
@@ -121,7 +121,7 @@ namespace plantitas.Controllers
                         throw;
                     }
                 }
-                TempData["prueba02"] = "prueba02";
+                
                 return RedirectToAction(nameof(Index));
             }
             return View(proforma);
