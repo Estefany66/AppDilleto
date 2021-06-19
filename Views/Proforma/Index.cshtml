@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<AppDilleto.Models.Proforma>
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Index";
 }
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <div class="card text-center" >
@@ -142,6 +142,22 @@
 </div>
 
 <hr />
+
+@{
+          Decimal total = 0;
+        
+         var contar = 0;
+      }
+      @foreach (var item in Model){
+         <tr>
+            @{
+              
+               total = total + item.Price*item.Quantity;
+               contar++;
+            }
+         </tr>
+      }
+
                         <div id="carrito" class="table-responsive">
                             <table class="table" id="lista-compra">
                                 <thead>
@@ -163,7 +179,7 @@
                                     <!-- <th scope="col"></th> -->
                                 </tr>
                                 <tr>
-                                    <th colspan="4" scope="col" class="text-center">TOTAL : S/. 120.00</th>
+                                    <th colspan="4" scope="col" class="text-center">Total : S/. @total</th>
                                     <th scope="col">
                                         <p id="total"></p>
                                     </th>
