@@ -1,6 +1,6 @@
 @model IEnumerable<AppDilleto.Models.Prod>
 
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <div class="card text-center" >
   <div class="card-header" >
   </div>
@@ -31,7 +31,13 @@
                 <div class="card-body">
                   <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
                   <p class="card-text">S/. @Html.DisplayFor(modelItem => item.Price)</p>
-                  <a class="btn btn-dark" asp-action="Add" asp-route-id="@item.ID">Añadir al carrito</a>
+                  <a class="btn btn-dark" asp-action="Add" asp-route-id="@item.ID" onclick="Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'El Producto se agrego con exito ',
+      showConfirmButton: false,
+      timer: 1500
+    }) ">Añadir al carrito</a>
                 </div>
               </div>
             </div>
