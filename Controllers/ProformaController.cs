@@ -88,6 +88,7 @@ namespace AppDilleto.Controllers
             {
                 return NotFound();
             }
+             TempData["prueba02"] = "prueba02";
             return View(proforma);
         }
 
@@ -158,6 +159,11 @@ namespace AppDilleto.Controllers
         private bool ProformaExists(int id)
         {
             return _context.DataCarrito.Any(e => e.ID == id);
+        }
+
+           public IActionResult Comprar()
+        {
+            return View();
         }
     }
 }
