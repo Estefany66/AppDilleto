@@ -1,6 +1,8 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 <div class="card text-center" >
   <div class="card-header" >
   </div>
@@ -113,7 +115,14 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
                                 
-                                <button id="confirmar" class="btn btn-outline-danger" id="procesar-compra" style="border-radius: 4px; width:300px;" type="submit"  >Realizar Compra</button>
+                                <button id="btn1" class="btn btn-outline-danger btn1" style="border-radius: 4px; width:300px;"onclick="Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'la compra se realizo con exito ',
+      showConfirmButton: false,
+      timer: 1500
+    }) " >Realizar Compra</button>
+                                
                             </div>
                         </div>
                         
@@ -127,3 +136,4 @@
 
         </div>
     </main>
+  

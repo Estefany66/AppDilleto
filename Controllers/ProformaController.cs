@@ -70,6 +70,7 @@ namespace AppDilleto.Controllers
             {
                 _context.Add(proforma);
                 await _context.SaveChangesAsync();
+                TempData["prueba"] = "prueba01";
                 return RedirectToAction(nameof(Index));
             }
             return View(proforma);
@@ -88,7 +89,7 @@ namespace AppDilleto.Controllers
             {
                 return NotFound();
             }
-             TempData["prueba02"] = "prueba02";
+             
             return View(proforma);
         }
 
@@ -122,6 +123,7 @@ namespace AppDilleto.Controllers
                         throw;
                     }
                 }
+                TempData["prueba02"] = "prueba02";
                 return RedirectToAction(nameof(Index));
             }
             return View(proforma);
@@ -141,7 +143,7 @@ namespace AppDilleto.Controllers
             {
                 return NotFound();
             }
-
+TempData["prueba03"] = "prueba03";
             return View(proforma);
         }
 
